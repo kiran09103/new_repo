@@ -1,0 +1,151 @@
+Last login: Thu Aug  8 20:41:03 on console
+(base) kiran@Kirans-MacBook-Pro ~ % mkdir developer1
+(base) kiran@Kirans-MacBook-Pro ~ % mkdir developer2
+(base) kiran@Kirans-MacBook-Pro ~ % cd developer1
+(base) kiran@Kirans-MacBook-Pro developer1 % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/kiran/developer1/.git/
+(base) kiran@Kirans-MacBook-Pro developer1 % nano demo.txt
+(base) kiran@Kirans-MacBook-Pro developer1 % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) kiran@Kirans-MacBook-Pro developer1 % git add demo.txt
+(base) kiran@Kirans-MacBook-Pro developer1 % git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   demo.txt
+
+(base) kiran@Kirans-MacBook-Pro developer1 % git config user.name "developer1"
+(base) kiran@Kirans-MacBook-Pro developer1 % git config user.email "developer1@gmail.com"
+(base) kiran@Kirans-MacBook-Pro developer1 % git commit -m"MasterCommitment"
+[master (root-commit) de4ed52] MasterCommitment
+ 1 file changed, 56 insertions(+)
+ create mode 100644 demo.txt
+(base) kiran@Kirans-MacBook-Pro developer1 % git log
+commit de4ed5206ad5bbe0e0859def449d24a3e94e2b05 (HEAD -> master)
+Author: developer1 <developer1@gmail.com>
+Date:   Thu Aug 8 21:15:54 2024 +0530
+
+    MasterCommitment
+(base) kiran@Kirans-MacBook-Pro developer1 % git remote add origin https://github.com/kiran09103/new_repo.git
+(base) kiran@Kirans-MacBook-Pro developer1 % git push origin master  
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 787 bytes | 787.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/kiran09103/new_repo.git
+ * [new branch]      master -> master
+(base) kiran@Kirans-MacBook-Pro developer1 % git branch -b demo
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --[no-]verbose    show hash and subject, give twice for upstream branch
+    -q, --[no-]quiet      suppress informational messages
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --[no-]set-upstream-to <upstream>
+                          change the upstream info
+    --[no-]unset-upstream unset the upstream info
+    --[no-]color[=<when>] use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --[no-]abbrev[=<n>]   use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --[no-]delete     delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --[no-]move       move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    --[no-]omit-empty     do not output a newline after empty formatted refs
+    -c, --[no-]copy       copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --[no-]list       list branch names
+    --[no-]show-current   show current branch name
+    --[no-]create-reflog  create the branch's reflog
+    --[no-]edit-description
+                          edit the description for the branch
+    -f, --[no-]force      force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --[no-]column[=<style>]
+                          list branches in columns
+    --[no-]sort <key>     field name to sort on
+    --[no-]points-at <object>
+                          print only branches of the object
+    -i, --[no-]ignore-case
+                          sorting and filtering are case insensitive
+    --[no-]recurse-submodules
+                          recurse through submodules
+    --[no-]format <format>
+                          format to use for the output
+
+(base) kiran@Kirans-MacBook-Pro developer1 % git push origin master
+Everything up-to-date
+(base) kiran@Kirans-MacBook-Pro developer1 % git checkout -b demo
+Switched to a new branch 'demo'
+(base) kiran@Kirans-MacBook-Pro developer1 % git status
+On branch demo
+nothing to commit, working tree clean
+(base) kiran@Kirans-MacBook-Pro developer1 % nano demo1.txt 
+
+  UW PICO 5.09                       File: demo1.txt                        Modified  
+
+This is branch file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help   ^O WriteOut   ^R Read File  ^Y Prev Pg    ^K Cut Text   ^C Cur Pos    
+^X Exit       ^J Justify    ^W Where is   ^V Next Pg    ^U UnCut Text ^T To Spell   
